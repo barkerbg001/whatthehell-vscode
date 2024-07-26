@@ -36,27 +36,33 @@
 
 |                               Color                                | Usage                                           |
 | :----------------------------------------------------------------: | ----------------------------------------------- |
-| ![#ff4c5a](https://via.placeholder.com/10/ff4c5a.png?text=+) `#ff4c5a` | Keywords, constants, template literals          |
+| ![#ff00ff](https://via.placeholder.com/10/ff00ff.png?text=+) `#ff00ff` | Keywords, constants, template literals          |
 | ![#ffd580](https://via.placeholder.com/10/ffd580.png?text=+) `#ffd580` | Functions, classes, object literal keys         |
 | ![#ff6b57](https://via.placeholder.com/10/ff6b57.png?text=+) `#ff6b57` | Constants, operators                            |
 | ![#62c6ff](https://via.placeholder.com/10/62c6ff.png?text=+) `#62c6ff` | Strings, markdown headings                      |
 | ![#3da5f6](https://via.placeholder.com/10/3da5f6.png?text=+) `#3da5f6` | Special keywords, classes, markdown code blocks |
 | ![#a2aabc](https://via.placeholder.com/10/a2aabc.png?text=+) `#a2aabc` | Variables, property names, tags                 |
+| ![#ff2d3b](https://via.placeholder.com/10/ff2d3b.png?text=+) `#ff2d3b` | Invalid, errors                                 |
+| ![#00ffff](https://via.placeholder.com/10/00ffff.png?text=+) `#00ffff` | Operator, Misc                                  |
+| ![#00ff80](https://via.placeholder.com/10/00ff80.png?text=+) `#00ff80` | Attributes                                      |
+| ![#ff8000](https://via.placeholder.com/10/ff8000.png?text=+) `#ff8000` | Strings, symbols, headings                      |
+| ![#8000ff](https://via.placeholder.com/10/8000ff.png?text=+) `#8000ff` | Special function, decorator                     |
 
 ### UI Colors
 
 |                               Color                                | Usage                                      |
 | :----------------------------------------------------------------: | ------------------------------------------ |
-| ![#0e1b2a](https://via.placeholder.com/10/0e1b2a.png?text=+) `#0e1b2a` | Workbench background                       |
-| ![#122236](https://via.placeholder.com/10/122236.png?text=+) `#122236` | Editor background                          |
-| ![#214b78](https://via.placeholder.com/10/214b78.png?text=+) `#214b78` | Highlight, widgets, panels                 |
-| ![#4b6691](https://via.placeholder.com/10/4b6691.png?text=+) `#4b6691` | Dividers, subtle UI elements               |
-| ![#6592b3](https://via.placeholder.com/10/6592b3.png?text=+) `#6592b3` | Status bar text, buttons, etc              |
-| ![#c5d3e0](https://via.placeholder.com/10/c5d3e0.png?text=+) `#c5d3e0` | Active text, anything that should be white |
-| ![#ff4c5a](https://via.placeholder.com/10/ff4c5a.png?text=+) `#ff4c5a` | Accent, list tree titles, badges, etc      |
-| ![#62c6ff](https://via.placeholder.com/10/62c6ff.png?text=+) `#62c6ff` | Addition highlights                        |
-| ![#ff2d3b](https://via.placeholder.com/10/ff2d3b.png?text=+) `#ff2d3b` | Deletion highlights, errors, warnings      |
-| ![#3da5f6](https://via.placeholder.com/10/3da5f6.png?text=+) `#3da5f6` | Modified highlights                        |
+| ![#ff0080](https://via.placeholder.com/10/ff0080.png?text=+) `#ff0080` | Workbench background                       |
+| ![#80ff00](https://via.placeholder.com/10/80ff00.png?text=+) `#80ff00` | Editor background                          |
+| ![#ff00ff](https://via.placeholder.com/10/ff00ff.png?text=+) `#ff00ff` | Highlight, widgets, panels                 |
+| ![#800080](https://via.placeholder.com/10/800080.png?text=+) `#800080` | Dividers, subtle UI elements               |
+| ![#00ffff](https://via.placeholder.com/10/00ffff.png?text=+) `#00ffff` | Status bar text, buttons, etc              |
+| ![#ff0000](https://via.placeholder.com/10/ff0000.png?text=+) `#ff0000` | Active text, anything that should be white |
+| ![#ff8000](https://via.placeholder.com/10/ff8000.png?text=+) `#ff8000` | Accent, list tree titles, badges, etc      |
+| ![#00ff80](https://via.placeholder.com/10/00ff80.png?text=+) `#00ff80` | Addition highlights                        |
+| ![#0000ff](https://via.placeholder.com/10/0000ff.png?text=+) `#0000ff` | Deletion highlights, errors, warnings      |
+| ![#ff6b57](https://via.placeholder.com/10/ff6b57.png?text=+) `#ff6b57` | Modified highlights                        |
+
 
 ## Theming Reference
 
