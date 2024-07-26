@@ -1,4 +1,4 @@
-name: Package and Upload VS Code Extension
+name: Package and Publish VS Code Extension
 
 on:
   push:
@@ -21,10 +21,20 @@ jobs:
     - name: Install dependencies
       run: npm install
 
+    - name: Bump version
+      run: npm version patch
+      env:
+        NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
     - name: Package extension
       run: |
         npm install -g vsce
         vsce package
+
+    - name: Publish extension
+      run: vsce publish
+      env:
+        VSCE_PAT: ${{ secrets.VSCE_PAT }}
 
     - name: Upload artifact
       uses: actions/upload-artifact@v2
