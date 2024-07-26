@@ -2,7 +2,7 @@
   "name": "whatthehell-vscode",
   "displayName": "What the Hell",
   "description": "A chaotic, dark theme for VS Code with mismatched, vibrant colors and erratic highlights.",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "publisher": "barkerbg001",
   "icon": "images/logo.png",
   "author": {
@@ -11,13 +11,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/barkerbg001/WhatTheHell"
+    "url": "https://github.com/barkerbg001/whatthehell-vscode"
   },
   "bugs": {
-    "url": "https://github.com/barkerbg001/WhatTheHell/issues",
+    "url": "https://github.com/barkerbg001/whatthehell-vscode/issues",
     "email": "barkerbg001+vscode@gmail.com"
   },
-  "homepage": "https://github.com/barkerbg001/WhatTheHell/blob/master/README.md",
+  "homepage": "https://github.com/barkerbg001/whatthehell-vscode/blob/master/README.md",
   "galleryBanner": {
     "color": "#0e1b2a",
     "theme": "dark"
