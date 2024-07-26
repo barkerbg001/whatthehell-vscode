@@ -1,4 +1,4 @@
-name: Package and Publish VS Code Extension 
+name: Package and Publish VS Code Extension
 
 on:
   push:
@@ -11,43 +11,56 @@ jobs:
 
     steps:
     - name: Checkout repository
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3
 
     - name: Set up Node.js
-      uses: actions/setup-node@v2
+      uses: actions/setup-node@v3
       with:
         node-version: '14'
 
     - name: Install dependencies
       run: npm install
 
-    - name: Commit changes
+    # Configure Git for GitHub Actions bot
+    - name: Configure Git
       run: |
         git config --global user.name 'github-actions[bot]'
         git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+
+    # Commit any changes if necessary
+    - name: Commit changes
+      run: |
         git add .
         git commit -m "Commit changes before version bump" || echo "No changes to commit"
+      continue-on-error: true
 
+    # Bump the version
     - name: Bump version
       run: npm version patch
 
-    # - name: Push changes
-    #   run: |
-    #     git remote set-url origin https://x-access-token:${{ secrets.GH_PAT }}@github.com/${{ github.repository }}
-    #     git push --follow-tags
+    # Push changes including tags
+    - name: Push changes
+      env:
+        GITHUB_TOKEN: ${{ secrets.GH_PAT }}
+      run: |
+        git remote set-url origin https://x-access-token:${{ secrets.GH_PAT }}@github.com/${{ github.repository }}
+        git push --follow-tags
 
+    # Package the VS Code extension
     - name: Package extension
       run: |
         npm install -g vsce
         vsce package
 
+    # Publish the VS Code extension
     - name: Publish extension
       run: vsce publish
       env:
         VSCE_PAT: ${{ secrets.VSCE_PAT }}
 
+    # Upload the packaged extension as an artifact
     - name: Upload artifact
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v3
       with:
         name: vscode-extension
         path: ./*.vsix
