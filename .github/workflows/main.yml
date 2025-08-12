@@ -28,10 +28,10 @@ jobs:
         vsce package
 
     # Publish the VS Code extension
-    - name: Publish extension
-      run: vsce publish
-      env:
-        VSCE_PAT: ${{ secrets.VSCE_PAT }}
+    # - name: Publish extension
+    #   run: vsce publish
+    #   env:
+    #     VSCE_PAT: ${{ secrets.VSCE_PAT }}
 
     # Upload the packaged extension as an artifact
     - name: Upload artifact
