@@ -5,7 +5,7 @@
   What the Hell Theme for VS Code
 </h1>
 <p align="center">
-  A chaotic, dark theme for VS Code with mismatched, vibrant colors and erratic highlights.
+  A sleek, high‑contrast theme for VS Code designed to improve focus and readability with vibrant, clearly defined code elements.
 </p>
 
 <p align="center">
@@ -19,8 +19,6 @@
     <img alt="Installs" src="https://img.shields.io/visual-studio-marketplace/i/Barkerbg001.whatthehell-vscode" />
   </a>
 </p>
-
-![demo](https://raw.githubusercontent.com/barkerbg001/whatthehell-vscode/master/images/demo.png)
 
 ## Installation via VS Code
 
