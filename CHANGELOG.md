@@ -5,7 +5,25 @@ All notable changes to the "What the Hell" theme are documented here.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/).
 
-## [Unreleased]
+## [1.1.2] - 2026-07-26
+
+### Added
+
+- `.github/workflows/release.yml` — pushing a `v*` tag now packages the extension and publishes a GitHub Release with the `.vsix` attached.
+- A "Releasing" section in `CONTRIBUTING.md`.
+
+### Changed
+
+- Bumped the `engines.vscode` minimum from `^1.18.0` to `^1.96.0` — the old floor dated back to 2017, long before the Chat/Copilot color keys this theme now styles existed.
+- README: fixed the "Releases" install method to reflect an actual Release now being published there; replaced the duplicated Contributing/Publishing sections with a link to `CONTRIBUTING.md`; added Changelog/Releases links.
+
+## [1.1.1] - 2026-07-26
+
+### Added
+
+- `CONTRIBUTING.md`.
+
+## [1.1.0] - 2026-07-26
 
 ### Added
 

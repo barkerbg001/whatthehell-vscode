@@ -40,7 +40,7 @@ code --install-extension Barkerbg001.whatthehell-vscode
 
 ### Method 3: VSIX File
 
-1. Download the latest `.vsix` file from the [Releases](https://github.com/barkerbg001/whatthehell-vscode/releases) page
+1. Download the `.vsix` file from the latest [Release](https://github.com/barkerbg001/whatthehell-vscode/releases)
 2. Open VS Code
 3. Go to `View → Extensions`
 4. Click the `...` menu at the top of the Extensions view
@@ -63,19 +63,7 @@ After installation, activate the theme:
 
 ## 🤝 Contributing
 
-Contributions are welcome! If you'd like to contribute:
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add some amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
-## 📝 Publishing
-
-```bash
-vsce publish patch/minor/major
-```
+Contributions are welcome! See [CONTRIBUTING.md](CONTRIBUTING.md) for setup instructions and how to submit a change.
 
 ## 📄 License
 
@@ -85,6 +73,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 - [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=Barkerbg001.whatthehell-vscode)
 - [GitHub Repository](https://github.com/barkerbg001/whatthehell-vscode)
+- [Releases](https://github.com/barkerbg001/whatthehell-vscode/releases)
+- [Changelog](CHANGELOG.md)
 - [Report Issues](https://github.com/barkerbg001/whatthehell-vscode/issues)
 
 ## 📚 Resources

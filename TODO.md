@@ -26,9 +26,13 @@ Tracking the repo audit findings from 2026-07-26.
 - [x] Optimized `images/logo.png` with pngquant (256-color palette, quality 40-85): 1.3MB → 467KB (~64% smaller), same 1024×1024 dimensions, visually indistinguishable. Confirmed it still packages correctly.
 - [x] Added a `validate-theme` script (`node -e "JSON.parse(...)"` on `themes/whatthehell-color-theme.json`) and a matching CI step before packaging. Verified it passes on the real file and fails loudly on broken JSON.
 - [x] Tried adding an auto-bump `Bump version` step + re-enabling `Publish extension` in CI, but reverted both per repo owner's request (Azure DevOps PAT setup for `VSCE_PAT` turned out to be more hassle than wanted right now). CI is back to just lint → validate-theme → package → upload-artifact, no auto-publish.
+- [x] Bumped to `1.1.0` (minor — real new functionality, the AI/Copilot color coverage, was added this session) and moved CHANGELOG's Unreleased section to a dated `[1.1.0]` entry. Packaged and verified.
+- [x] Added `CONTRIBUTING.md` (setup, `npm run` scripts reference, PR steps). Confirmed it's excluded from the packaged `.vsix` by vsce's built-in defaults already.
+- [x] Fixed the broken "download from Releases" install method (Method 3) — no GitHub Release had ever actually been published (zero git tags in history). Added `.github/workflows/release.yml`, triggered on `v*` tag pushes, that packages the extension and publishes a GitHub Release with the `.vsix` attached.
+- [x] Rewrote the README: fixed Method 3 wording, replaced the duplicated Contributing/Publishing sections with a link to `CONTRIBUTING.md`, added Changelog/Releases links.
+- [x] Bumped `engines.vscode` from `^1.18.0` (2017) to `^1.96.0` — roughly matches when the Chat/Copilot color keys added this session actually exist.
+- [x] Bumped to `1.1.2` and cut the first real release (tagged `v1.1.2`, pushed to trigger the new release workflow).
 
 ## 🔲 Still to do
 
-### Nice to have
-
-- [ ] Add `CONTRIBUTING.md` if outside contributions are wanted.
+Nothing outstanding right now.
