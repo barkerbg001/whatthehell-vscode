@@ -5,17 +5,28 @@ All notable changes to the "What the Hell" theme are documented here.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/).
 
+## [1.1.3] - 2026-07-26
+
+### Maintenance
+
+- Version bump; no functional changes.
+
 ## [1.1.2] - 2026-07-26
 
 ### Added
 
-- `.github/workflows/release.yml` — pushing a `v*` tag now packages the extension and publishes a GitHub Release with the `.vsix` attached.
+- CI now auto-bumps the patch version and publishes a GitHub Release with the `.vsix` attached on every push to `main` (`.github/workflows/main.yml`, renamed "Build and Release"). Marketplace publishing stays manual/separate.
 - A "Releasing" section in `CONTRIBUTING.md`.
 
 ### Changed
 
 - Bumped the `engines.vscode` minimum from `^1.18.0` to `^1.96.0` — the old floor dated back to 2017, long before the Chat/Copilot color keys this theme now styles existed.
 - README: fixed the "Releases" install method to reflect an actual Release now being published there; replaced the duplicated Contributing/Publishing sections with a link to `CONTRIBUTING.md`; added Changelog/Releases links.
+- Replaced the deprecated `vsce` devDependency with its maintained successor, `@vscode/vsce`.
+
+### Security
+
+- Resolved several high/moderate-severity vulnerabilities (`brace-expansion`, `tar-fs`, `tmp`, `underscore`, `qs`, `linkify-it`/`markdown-it`) that came from the old, unmaintained `vsce` package's dependency tree. `npm audit` now reports 0 vulnerabilities.
 
 ## [1.1.1] - 2026-07-26
 

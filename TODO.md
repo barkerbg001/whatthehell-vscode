@@ -31,8 +31,10 @@ Tracking the repo audit findings from 2026-07-26.
 - [x] Fixed the broken "download from Releases" install method (Method 3) — no GitHub Release had ever actually been published (zero git tags in history). Added `.github/workflows/release.yml`, triggered on `v*` tag pushes, that packages the extension and publishes a GitHub Release with the `.vsix` attached.
 - [x] Rewrote the README: fixed Method 3 wording, replaced the duplicated Contributing/Publishing sections with a link to `CONTRIBUTING.md`, added Changelog/Releases links.
 - [x] Bumped `engines.vscode` from `^1.18.0` (2017) to `^1.96.0` — roughly matches when the Chat/Copilot color keys added this session actually exist.
-- [x] Bumped to `1.1.2` and cut the first real release (tagged `v1.1.2`, pushed to trigger the new release workflow).
+- [x] Bumped to `1.1.2` (README rewrite, release workflow, engines.vscode bump). Staged, not committed — repo owner commits/tags/pushes himself.
+- [x] Migrated off the deprecated `vsce@2.15.0` devDependency to `@vscode/vsce@^3.9.2` (same `vsce` CLI, no script changes needed) after Dependabot couldn't patch a `brace-expansion` vulnerability pulled in through it. This also cleared out several other unrelated high/moderate vulnerabilities (`tar-fs`, `tmp`, `underscore`, `qs`, `linkify-it`/`markdown-it`) that were sitting in the old `vsce`'s dependency tree. Ran `npm audit fix` afterward — `npm audit` now reports 0 vulnerabilities. Verified `vsce --version`, lint, validate-theme, and packaging all still work.
+- [x] Repo owner asked for every push to `main` to make a GitHub Release (not Marketplace publish — that's still separate/manual). Merged the earlier tag-triggered `release.yml` into `main.yml` (renamed "Build and Release") since a tag-triggered workflow would never fire anyway — bot-authored pushes using the default `GITHUB_TOKEN` don't retrigger other workflows. New flow on every push to `main`: lint → validate-theme → auto-bump patch version (commit + tag pushed back to `main`) → package → `softprops/action-gh-release@v2` publishes the GitHub Release with the `.vsix` attached. Updated CONTRIBUTING.md's "Releasing" section to match.
 
 ## 🔲 Still to do
 
-Nothing outstanding right now.
+Nothing outstanding right now. Everything above is staged but not committed — commit/push is on the repo owner.

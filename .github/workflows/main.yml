@@ -1,9 +1,12 @@
-name: Build
+name: Build and Release
 
 on:
   push:
     branches:
       - main
+
+permissions:
+  contents: write
 
 jobs:
   build:
@@ -27,13 +30,25 @@ jobs:
       - name: Validate theme JSON
         run: npm run validate-theme
 
+      # Auto-bump the patch version so every push to main is a new release,
+      # then push the version commit + tag back to main.
+      - name: Bump version
+        id: bump
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          npm version patch -m "chore: bump version to %s"
+          echo "version=$(node -p "require('./package.json').version")" >> "$GITHUB_OUTPUT"
+          git push origin HEAD:main --follow-tags
+
       # Package the VS Code extension
       - name: Package extension
         run: npm run package
 
-      # Upload the packaged extension as an artifact
-      - name: Upload artifact
-        uses: actions/upload-artifact@v4
+      # Publish a GitHub Release with the .vsix attached
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
         with:
-          name: vscode-extension
-          path: ./*.vsix
+          tag_name: v${{ steps.bump.outputs.version }}
+          files: ./*.vsix
+          generate_release_notes: true

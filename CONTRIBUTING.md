@@ -30,7 +30,6 @@ Use the [issue tracker](https://github.com/barkerbg001/whatthehell-vscode/issues
 
 ## Releasing (maintainers)
 
-1. Bump the version: `npm version patch` (or `minor`/`major`), and update `CHANGELOG.md`.
-2. Push the commit, then push the version tag: `git push && git push --tags`.
-3. Pushing a `v*` tag triggers CI to package the extension and publish a GitHub Release with the `.vsix` attached.
-4. To also publish to the Marketplace, run `npm run publish` locally (requires a `VSCE_PAT` environment variable — see [vsce's publishing docs](https://code.visualstudio.com/api/working-with-extensions/publishing-extension)).
+Every push to `main` automatically bumps the patch version, packages the extension, and publishes a GitHub Release with the `.vsix` attached — no manual version bump needed. Update `CHANGELOG.md` yourself before merging (CI doesn't do this part).
+
+To also publish to the Marketplace, run `npm run publish` locally (requires a `VSCE_PAT` environment variable — see [vsce's publishing docs](https://code.visualstudio.com/api/working-with-extensions/publishing-extension)).
