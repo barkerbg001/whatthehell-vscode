@@ -1,41 +1,57 @@
-name: Package and Publish VS Code Extension 
+name: Package and Publish VS Code Extension
 
 on:
   push:
     branches:
       - main
 
+permissions:
+  contents: write
+
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v3
+      - name: Checkout repository
+        uses: actions/checkout@v3
 
-    - name: Set up Node.js
-      uses: actions/setup-node@v3
-      with:
-        node-version: '20'
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'
 
-    - name: Install dependencies
-      run: npm install
+      - name: Install dependencies
+        run: npm install
 
-    # Package the VS Code extension
-    - name: Package extension
-      run: |
-        npm install -g vsce
-        vsce package
+      - name: Lint
+        run: npm run lint
 
-    # Publish the VS Code extension
-    # - name: Publish extension
-    #   run: vsce publish
-    #   env:
-    #     VSCE_PAT: ${{ secrets.VSCE_PAT }}
+      - name: Validate theme JSON
+        run: npm run validate-theme
 
-    # Upload the packaged extension as an artifact
-    - name: Upload artifact
-      uses: actions/upload-artifact@v4
-      with:
-        name: vscode-extension
-        path: ./*.vsix
+      # Auto-bump the patch version so every push to main is a new release,
+      # then push the version commit + tag back to main.
+      - name: Bump version
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          npm version patch -m "chore: bump version to %s"
+          git push origin HEAD:main --follow-tags
+
+      # Package the VS Code extension
+      - name: Package extension
+        run: npm run package
+
+      # Publish the VS Code extension
+      - name: Publish extension
+        run: npm run publish
+        env:
+          VSCE_PAT: ${{ secrets.VSCE_PAT }}
+
+      # Upload the packaged extension as an artifact
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: vscode-extension
+          path: ./*.vsix

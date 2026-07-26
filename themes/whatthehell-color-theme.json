@@ -155,6 +155,9 @@
     "editorIndentGuide.activeBackground": "#0000ff",
     "editorInlayHint.background": "#ff0080",
     "editorInlayHint.foreground": "#8000ff",
+    "editorGhostText.background": "#ff0080",
+    "editorGhostText.foreground": "#8000ff",
+    "editorGhostText.border": "#00ff80",
     "editorRuler.foreground": "#80ff00",
     "editorCodeLens.foreground": "#00ffff",
     "editorBracketMatch.background": "#ff8000",
@@ -341,7 +344,38 @@
     "breadcrumb.background": "#8000ff",
     "breadcrumb.focusForeground": "#00ff00",
     "breadcrumb.activeSelectionForeground": "#ff0000",
-    "breadcrumbPicker.background": "#ff0080"
+    "breadcrumbPicker.background": "#ff0080",
+
+    "chat.requestBorder": "#00ffff",
+    "chat.requestBackground": "#ff0080",
+    "chat.requestBubbleBackground": "#ff0080",
+    "chat.requestBubbleHoverBackground": "#8000ff",
+    "chat.requestCodeBorder": "#00ff80",
+    "chat.slashCommandBackground": "#8000ff",
+    "chat.slashCommandForeground": "#0080ff",
+    "chat.avatarBackground": "#ff00ff",
+    "chat.avatarForeground": "#00ffff",
+    "chat.editedFileForeground": "#ff8000",
+    "chat.linesAddedForeground": "#00ff80",
+    "chat.linesRemovedForeground": "#ff0000",
+    "chat.checkpointSeparator": "#00ffff",
+    "chat.thinkingShimmer": "#ff00ff",
+    "chatManagement.sashBorder": "#00ffff",
+
+    "inlineChat.background": "#ff00ff",
+    "inlineChat.foreground": "#0000ff",
+    "inlineChat.border": "#8000ff",
+    "inlineChat.shadow": "#abcdef",
+    "inlineChatInput.background": "#ff8000",
+    "inlineChatInput.border": "#ff0080",
+    "inlineChatInput.focusBorder": "#00ffff",
+    "inlineChatInput.placeholderForeground": "#0080ff",
+
+    "inlineChatDiff.inserted": "#ff00ff",
+    "inlineChatDiff.removed": "#ff0000",
+
+    "interactive.activeCodeBorder": "#00ffff",
+    "interactive.inactiveCodeBorder": "#800080"
   },
   "tokenColors": [
     {

@@ -4,6 +4,7 @@
   "description": "A sleek, high‑contrast theme for VS Code designed to improve focus and readability with vibrant, clearly defined code elements.",
   "version": "1.0.7",
   "publisher": "barkerbg001",
+  "license": "MIT",
   "icon": "images/logo.png",
   "author": {
     "name": "Barkerbg001",
@@ -17,7 +18,7 @@
     "url": "https://github.com/barkerbg001/whatthehell-vscode/issues",
     "email": "barkerbg001+vscode@gmail.com"
   },
-  "homepage": "https://github.com/barkerbg001/whatthehell-vscode/blob/master/README.md",
+  "homepage": "https://github.com/barkerbg001/whatthehell-vscode/blob/main/README.md",
   "galleryBanner": {
     "color": "#0e1b2a",
     "theme": "dark"
@@ -43,13 +44,15 @@
       }
     ]
   },
+  "scripts": {
+    "format": "prettier --write .",
+    "lint": "prettier --check .",
+    "validate-theme": "node -e \"JSON.parse(require('fs').readFileSync('themes/whatthehell-color-theme.json','utf8'))\"",
+    "package": "vsce package",
+    "publish": "vsce publish"
+  },
   "devDependencies": {
-    "@babel/core": "^7.25.2",
-    "@babel/eslint-parser": "^7.25.1",
-    "@upstatement/eslint-config": "^2.0.0",
     "@upstatement/prettier-config": "^1.1.0",
-    "eslint": "^8.57.0",
-    "eslint-config-prettier": "^8.10.0",
     "prettier": "^2.8.8",
     "vsce": "^2.15.0"
   }

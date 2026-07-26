@@ -1,75 +1,101 @@
-<p align="center">
-  <img alt="What the Hell Logo" src="https://raw.githubusercontent.com/barkerbg001/whatthehell-vscode/master/images/logo.png" width="100" />
-</p>
-<h1 align="center">
-  What the Hell Theme for VS Code
-</h1>
-<p align="center">
-  A sleek, high‑contrast theme for VS Code designed to improve focus and readability with vibrant, clearly defined code elements.
-</p>
+<div align="center">
+  <img alt="What the Hell Logo" src="https://raw.githubusercontent.com/barkerbg001/whatthehell-vscode/main/images/logo.png" width="120" />
 
-<p align="center">
-  <a href="https://marketplace.visualstudio.com/items?itemName=Barkerbg001.whatthehell-vscode">
-    <img alt="Version" src="https://img.shields.io/visual-studio-marketplace/v/Barkerbg001.whatthehell-vscode?color=brightgreen" />
-  </a>
-  <a href="https://marketplace.visualstudio.com/items?itemName=Barkerbg001.whatthehell-vscode">
-    <img alt="Downloads" src="https://img.shields.io/visual-studio-marketplace/d/Barkerbg001.whatthehell-vscode" />
-  </a>
-  <a href="https://marketplace.visualstudio.com/items?itemName=Barkerbg001.whatthehell-vscode">
-    <img alt="Installs" src="https://img.shields.io/visual-studio-marketplace/i/Barkerbg001.whatthehell-vscode" />
-  </a>
-</p>
+  <h1>What the Hell Theme for VS Code</h1>
 
-## Installation via VS Code
+  <p>A sleek, high‑contrast theme for VS Code designed to improve focus and readability with vibrant, clearly defined code elements.</p>
 
-1. Open **Extensions** sidebar panel in VS Code. `View → Extensions`
+  <p>
+    <a href="https://marketplace.visualstudio.com/items?itemName=Barkerbg001.whatthehell-vscode"><strong>Install from Marketplace</strong></a>
+    ·
+    <a href="https://github.com/barkerbg001/whatthehell-vscode/issues">Report an issue</a>
+  </p>
+</div>
+
+---
+
+## ✨ Features
+
+- **High Contrast**: Clearly defined syntax elements that stay legible in bright or dim rooms
+- **Vibrant Palette**: A bold mix of magenta, orange, and cyan accents for fast visual scanning
+- **Semantic Highlighting**: Enhanced code understanding with semantic token colors
+- **Full Workbench Coverage**: Editor, sidebar, tabs, terminal, and status bar all themed together
+- **Built for Focus**: Colors chosen to draw the eye to what matters — keywords, functions, and errors
+
+## 📦 Installation
+
+### Method 1: VS Code Marketplace (Recommended)
+
+1. Open **Extensions** sidebar panel in VS Code (`View → Extensions` or `Ctrl+Shift+X`)
 2. Search for `What the Hell`
 3. Click **Install** to install it
 4. Click **Reload** to reload the editor
-5. Code > Preferences > Color Theme > **What the Hell**
+5. Go to `Code > Preferences > Color Theme > What the Hell` (or `File > Preferences > Color Theme > What the Hell` on Windows/Linux)
 
-## Color Reference
+### Method 2: Command Line
 
-### Syntax Colors
+```bash
+code --install-extension Barkerbg001.whatthehell-vscode
+```
 
-|                               Color                                | Usage                                           |
-| :----------------------------------------------------------------: | ----------------------------------------------- |
-| ![#ff00ff](https://via.placeholder.com/10/ff00ff.png?text=+) `#ff00ff` | Keywords, constants, template literals          |
-| ![#ffd580](https://via.placeholder.com/10/ffd580.png?text=+) `#ffd580` | Functions, classes, object literal keys         |
-| ![#ff6b57](https://via.placeholder.com/10/ff6b57.png?text=+) `#ff6b57` | Constants, operators                            |
-| ![#62c6ff](https://via.placeholder.com/10/62c6ff.png?text=+) `#62c6ff` | Strings, markdown headings                      |
-| ![#3da5f6](https://via.placeholder.com/10/3da5f6.png?text=+) `#3da5f6` | Special keywords, classes, markdown code blocks |
-| ![#a2aabc](https://via.placeholder.com/10/a2aabc.png?text=+) `#a2aabc` | Variables, property names, tags                 |
-| ![#ff2d3b](https://via.placeholder.com/10/ff2d3b.png?text=+) `#ff2d3b` | Invalid, errors                                 |
-| ![#00ffff](https://via.placeholder.com/10/00ffff.png?text=+) `#00ffff` | Operator, Misc                                  |
-| ![#00ff80](https://via.placeholder.com/10/00ff80.png?text=+) `#00ff80` | Attributes                                      |
-| ![#ff8000](https://via.placeholder.com/10/ff8000.png?text=+) `#ff8000` | Strings, symbols, headings                      |
-| ![#8000ff](https://via.placeholder.com/10/8000ff.png?text=+) `#8000ff` | Special function, decorator                     |
+### Method 3: VSIX File
 
-### UI Colors
+1. Download the latest `.vsix` file from the [Releases](https://github.com/barkerbg001/whatthehell-vscode/releases) page
+2. Open VS Code
+3. Go to `View → Extensions`
+4. Click the `...` menu at the top of the Extensions view
+5. Select `Install from VSIX...`
+6. Choose the downloaded `.vsix` file
 
-|                               Color                                | Usage                                      |
-| :----------------------------------------------------------------: | ------------------------------------------ |
-| ![#ff0080](https://via.placeholder.com/10/ff0080.png?text=+) `#ff0080` | Workbench background                       |
-| ![#80ff00](https://via.placeholder.com/10/80ff00.png?text=+) `#80ff00` | Editor background                          |
-| ![#ff00ff](https://via.placeholder.com/10/ff00ff.png?text=+) `#ff00ff` | Highlight, widgets, panels                 |
-| ![#800080](https://via.placeholder.com/10/800080.png?text=+) `#800080` | Dividers, subtle UI elements               |
-| ![#00ffff](https://via.placeholder.com/10/00ffff.png?text=+) `#00ffff` | Status bar text, buttons, etc              |
-| ![#ff0000](https://via.placeholder.com/10/ff0000.png?text=+) `#ff0000` | Active text, anything that should be white |
-| ![#ff8000](https://via.placeholder.com/10/ff8000.png?text=+) `#ff8000` | Accent, list tree titles, badges, etc      |
-| ![#00ff80](https://via.placeholder.com/10/00ff80.png?text=+) `#00ff80` | Addition highlights                        |
-| ![#0000ff](https://via.placeholder.com/10/0000ff.png?text=+) `#0000ff` | Deletion highlights, errors, warnings      |
-| ![#ff6b57](https://via.placeholder.com/10/ff6b57.png?text=+) `#ff6b57` | Modified highlights                        |
+## 🚀 Quick Start
 
+After installation, activate the theme:
 
-## Theming Reference
+1. Press `Ctrl+K Ctrl+T` (or `Cmd+K Cmd+T` on macOS) to open the theme picker
+2. Select **What the Hell** from the list
+3. Enjoy coding with your new theme!
 
-[VS Code Theme Color Reference](https://code.visualstudio.com/docs/getstarted/theme-color-reference)
+## 💡 Tips
 
-[VS Code Theme Documentation](https://code.visualstudio.com/docs/extensions/themes-snippets-colorizers)
+- The theme works best with **semantic highlighting** enabled (default in VS Code)
+- For the best experience, use a font with good ligature support (e.g., Fira Code, JetBrains Mono)
+- Adjust your editor font size and line height in settings for optimal readability
 
-[VS Code Publishing Extensions](https://code.visualstudio.com/docs/extensions/publish-extension)
+## 🤝 Contributing
+
+Contributions are welcome! If you'd like to contribute:
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## 📝 Publishing
 
 ```bash
 vsce publish patch/minor/major
 ```
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🔗 Links
+
+- [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=Barkerbg001.whatthehell-vscode)
+- [GitHub Repository](https://github.com/barkerbg001/whatthehell-vscode)
+- [Report Issues](https://github.com/barkerbg001/whatthehell-vscode/issues)
+
+## 📚 Resources
+
+- [VS Code Theme Color Reference](https://code.visualstudio.com/docs/getstarted/theme-color-reference)
+- [VS Code Theme Documentation](https://code.visualstudio.com/docs/extensions/themes-snippets-colorizers)
+- [VS Code Publishing Extensions](https://code.visualstudio.com/docs/extensions/publish-extension)
+
+---
+
+<div align="center">
+  <p>Made with ❤️ by <a href="https://github.com/barkerbg001">Barkerbg001</a></p>
+  <p>If you like this theme, please consider giving it a ⭐ on GitHub!</p>
+</div>
