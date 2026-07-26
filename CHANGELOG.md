@@ -31,7 +31,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 - CI now uses `npm run package` instead of installing `vsce` globally.
 - Added a `Lint` step and a `Validate theme JSON` step before packaging.
-- CI now auto-bumps the patch version and pushes the version commit/tag back to `main` before packaging, and re-enabled the `Publish extension` step.
 
 ## [1.0.7] - 2025-08-12
 

@@ -25,14 +25,9 @@ Tracking the repo audit findings from 2026-07-26.
 - [x] Dropped the unused eslint-related devDependencies (`eslint`, `eslint-config-prettier`, `@upstatement/eslint-config`, `@babel/core`, `@babel/eslint-parser`) — there's no real JS source in this repo for eslint to lint, just `prettier.config.js`. Verified `npm run lint` and `npm run package` still work after the cleanup.
 - [x] Optimized `images/logo.png` with pngquant (256-color palette, quality 40-85): 1.3MB → 467KB (~64% smaller), same 1024×1024 dimensions, visually indistinguishable. Confirmed it still packages correctly.
 - [x] Added a `validate-theme` script (`node -e "JSON.parse(...)"` on `themes/whatthehell-color-theme.json`) and a matching CI step before packaging. Verified it passes on the real file and fails loudly on broken JSON.
-
-- [x] Added an auto-bump `Bump version` step to `.github/workflows/main.yml` (`npm version patch` + push commit/tag back to `main` before packaging) and re-enabled the `Publish extension` step. Chosen approach: patch-bump on every push to main (confirmed with repo owner), rather than conventional-commits parsing or a manual workflow_dispatch trigger.
+- [x] Tried adding an auto-bump `Bump version` step + re-enabling `Publish extension` in CI, but reverted both per repo owner's request (Azure DevOps PAT setup for `VSCE_PAT` turned out to be more hassle than wanted right now). CI is back to just lint → validate-theme → package → upload-artifact, no auto-publish.
 
 ## 🔲 Still to do
-
-### CI / tooling
-
-- [ ] Verify the `VSCE_PAT` secret actually exists in the repo settings — couldn't check from here (no `gh` CLI available in this environment). If it's missing, the `Publish extension` step will fail on the next push to main.
 
 ### Nice to have
 
