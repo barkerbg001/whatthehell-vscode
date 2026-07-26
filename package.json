@@ -53,7 +53,7 @@
   },
   "devDependencies": {
     "@upstatement/prettier-config": "^1.1.0",
-    "prettier": "^2.8.8",
+    "prettier": "^3.9.6",
     "vsce": "^2.15.0"
   }
 }
