@@ -54,6 +54,6 @@
   "devDependencies": {
     "@upstatement/prettier-config": "^1.1.0",
     "@vscode/vsce": "^3.9.2",
-    "prettier": "^2.8.8"
+    "prettier": "^3.9.9"
   }
 }
